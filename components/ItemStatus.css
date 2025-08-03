@@ -1,0 +1,71 @@
+/* 既存のCSSがあれば、以下を追加 */
+
+.inventory-controls {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.refresh-button {
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.refresh-button:hover {
+  background-color: #e0e0e0;
+}
+
+.listing-info {
+  margin-top: 10px;
+  padding: 8px;
+  background-color: #fff8e1;
+  border-radius: 4px;
+  font-size: 0.9em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.listing-id {
+  font-size: 0.8em;
+  color: #777;
+}
+
+.list-item-btn.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.debug-info {
+  margin-top: 10px;
+  padding: 8px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.debug-info summary {
+  cursor: pointer;
+  color: #666;
+  font-size: 0.8em;
+}
+
+.debug-info pre {
+  margin: 8px 0 0;
+  padding: 8px;
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  overflow-x: auto;
+  font-size: 0.8em;
+}

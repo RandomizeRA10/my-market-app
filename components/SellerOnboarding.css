@@ -1,0 +1,499 @@
+.seller-onboarding {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem 1rem;
+}
+
+.onboarding-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.onboarding-container h1 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.onboarding-container > p {
+  padding: 0 2rem;
+  color: #666;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* エラー・成功メッセージ */
+.error-message, .success-message {
+  margin: 1rem 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.error-message {
+  background: #fee;
+  border: 1px solid #fcc;
+  color: #c33;
+}
+
+.success-message {
+  background: #efe;
+  border: 1px solid #cfc;
+  color: #3c3;
+}
+
+/* ステータスセクション */
+.status-section {
+  padding: 0 2rem 2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.status-section h2 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.status-info {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.status-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.status-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.status-item strong {
+  color: #495057;
+  font-weight: 600;
+}
+
+.status-yes {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.status-no {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+.status-minimal {
+  color: #ffc107;
+  font-weight: 600;
+}
+
+.status-standard {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.account-id {
+  font-family: 'Courier New', monospace;
+  background: #e9ecef;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.refresh-button {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.refresh-button:hover:not(:disabled) {
+  background: #5a6268;
+}
+
+.refresh-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* アカウント作成セクション */
+.account-creation-section {
+  padding: 2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.account-creation-section h2 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.account-creation-section > p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.creation-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .creation-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+.option-card {
+  border: 2px solid #e9ecef;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+.option-card:hover {
+  border-color: #667eea;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.1);
+}
+
+.option-card h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.option-card p {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.option-card ul {
+  text-align: left;
+  color: #666;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+}
+
+.option-card li {
+  margin-bottom: 0.5rem;
+}
+
+.primary-button, .secondary-button {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.primary-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.primary-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.secondary-button {
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.secondary-button:hover:not(:disabled) {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.primary-button:disabled, .secondary-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* オンボーディングセクション */
+.onboarding-section {
+  padding: 2rem;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.onboarding-section h2 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.onboarding-section p {
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.onboarding-button {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.onboarding-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+}
+
+.onboarding-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.onboarding-link {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #e8f5e8;
+  border-radius: 10px;
+  border: 1px solid #c3e6c3;
+}
+
+.onboarding-link p {
+  margin-bottom: 1rem;
+  color: #155724;
+}
+
+.onboarding-link a {
+  color: #28a745;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.onboarding-link a:hover {
+  text-decoration: underline;
+}
+
+/* 完了セクション */
+.completion-section {
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.completion-section h2 {
+  color: #28a745;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.completion-section > p {
+  color: #666;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.completion-info {
+  background: #e8f5e8;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid #c3e6c3;
+}
+
+.completion-info p {
+  margin-bottom: 0.5rem;
+  color: #155724;
+}
+
+.completion-info p:last-child {
+  margin-bottom: 0;
+}
+
+.next-steps {
+  text-align: left;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.next-steps h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.next-steps ul {
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.next-steps li {
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-link {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.dashboard-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* ヘルプセクション */
+.help-section {
+  padding: 2rem;
+}
+
+.help-section h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.help-section details {
+  margin-bottom: 1rem;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.help-section summary {
+  background: #f8f9fa;
+  padding: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: #495057;
+  transition: background-color 0.3s ease;
+}
+
+.help-section summary:hover {
+  background: #e9ecef;
+}
+
+.help-section details[open] summary {
+  background: #667eea;
+  color: white;
+}
+
+.help-section details p {
+  padding: 1rem;
+  margin: 0;
+  color: #666;
+  line-height: 1.6;
+  background: white;
+}
+
+/* 認証必須セクション */
+.auth-required {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.auth-required h2 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.auth-required p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .seller-onboarding {
+    padding: 1rem 0.5rem;
+  }
+  
+  .onboarding-container {
+    border-radius: 10px;
+  }
+  
+  .onboarding-container h1 {
+    font-size: 2rem;
+    padding: 1.5rem;
+  }
+  
+  .status-section, .account-creation-section, 
+  .onboarding-section, .completion-section, 
+  .help-section {
+    padding: 1.5rem;
+  }
+  
+  .option-card {
+    padding: 1.5rem;
+  }
+  
+  .status-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .seller-onboarding {
+    padding: 0.5rem;
+  }
+  
+  .onboarding-container h1 {
+    font-size: 1.8rem;
+    padding: 1rem;
+  }
+  
+  .status-section, .account-creation-section, 
+  .onboarding-section, .completion-section, 
+  .help-section {
+    padding: 1rem;
+  }
+  
+  .option-card {
+    padding: 1rem;
+  }
+}
