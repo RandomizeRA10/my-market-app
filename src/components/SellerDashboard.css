@@ -1,0 +1,220 @@
+.seller-dashboard {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  color: #333;
+}
+
+.back-button {
+  background: #6c757d;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.back-button:hover {
+  background: #5a6268;
+}
+
+.account-status-card,
+.sales-summary-card,
+.account-balance-card,
+.sales-history-card,
+.no-sales-card {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.account-status-card h3,
+.sales-summary-card h3,
+.account-balance-card h3,
+.sales-history-card h3,
+.no-sales-card h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 1.3em;
+}
+
+.status-grid,
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.status-item,
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.status-item .label,
+.summary-item .label {
+  font-size: 0.9em;
+  color: #666;
+  font-weight: 500;
+}
+
+.status-item .value,
+.summary-item .value {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.value.complete {
+  color: #28a745;
+}
+
+.value.incomplete {
+  color: #dc3545;
+}
+
+.value.enabled {
+  color: #28a745;
+}
+
+.value.disabled {
+  color: #dc3545;
+}
+
+.summary-item.total {
+  border-top: 2px solid #007cba;
+  padding-top: 15px;
+}
+
+.summary-item.total .value {
+  color: #007cba;
+  font-size: 1.3em;
+}
+
+.balance-amount {
+  font-size: 2em;
+  font-weight: bold;
+  color: #007cba;
+  margin-bottom: 10px;
+}
+
+.payout-info {
+  color: #666;
+  font-size: 0.95em;
+  margin: 0;
+}
+
+.sales-table-container {
+  overflow-x: auto;
+}
+
+.sales-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.sales-table th,
+.sales-table td {
+  padding: 12px 8px;
+  text-align: left;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.sales-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #333;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  font-weight: 500;
+}
+
+.status-badge.complete {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.loading-state,
+.error-state,
+.no-account-state {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0,0,0,.1);
+  border-radius: 50%;
+  border-top-color: #007cba;
+  animation: spin 1s ease-in-out infinite;
+  margin-top: 20px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.retry-button,
+.setup-button {
+  background: #007cba;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 20px;
+  transition: background-color 0.2s;
+}
+
+.retry-button:hover,
+.setup-button:hover {
+  background: #005a87;
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .status-grid,
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .sales-table {
+    font-size: 0.9em;
+  }
+  
+  .sales-table th,
+  .sales-table td {
+    padding: 8px 4px;
+  }
+}
