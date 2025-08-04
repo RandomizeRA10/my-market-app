@@ -1,0 +1,97 @@
+/* グローバルスタイル */
+:root {
+  --primary-color: #4a6cf7;
+  --secondary-color: #ff8a65;
+  --success-color: #4caf50;
+  --danger-color: #f44336;
+  --warning-color: #ff9800;
+  --text-color: #333333;
+  --light-text: #666666;
+  --background-color: #f5f7fa;
+  --card-background: #ffffff;
+  --border-color: #e0e0e0;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+h1, h2, h3, h4 {
+  margin-top: 0;
+  color: var(--text-color);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.primary-button, .button.primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.primary-button:hover, .button.primary:hover {
+  background-color: #3a57d7;
+}
+
+.secondary-button, .button.secondary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.secondary-button:hover, .button.secondary:hover {
+  background-color: #f97a55;
+}
+
+.error-message {
+  color: var(--danger-color);
+  background-color: rgba(244, 67, 54, 0.1);
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: var(--primary-color);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
